@@ -1,17 +1,16 @@
 package com.tailor.app.base
 
 
-import android.annotation.SuppressLint
-import android.app.DatePickerDialog
-import android.app.Dialog
-import android.app.admin.DevicePolicyManager
-import android.app.admin.SystemUpdatePolicy
-import android.content.*
+import android.content.Context
+import android.content.DialogInterface
 import android.net.ConnectivityManager
-import android.os.*
-import android.provider.Settings
+import android.os.Bundle
+import android.os.Environment
+import android.os.StrictMode
 import android.util.Log
-import android.view.*
+import android.util.Pair
+import android.view.View
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.annotation.LayoutRes
@@ -21,32 +20,21 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
-import androidx.core.content.FileProvider
-import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
-import com.google.android.gms.common.internal.service.Common
-
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.Gson
 import com.tailor.app.R
-
-import com.tailor.app.api.ApiServices
 import com.tailor.app.manager.FragmentNavigationFactory
 import com.tailor.app.manager.NavigationController
-
-
-import io.reactivex.schedulers.Schedulers
-
+import okhttp3.ResponseBody
 import org.koin.android.ext.android.inject
 import java.io.*
 import java.net.InetSocketAddress
 import java.net.Socket
-import java.util.*
 
 
 abstract class BaseActivity<T : ViewDataBinding, V : ViewModel> : AppCompatActivity(),
@@ -250,5 +238,5 @@ abstract class BaseActivity<T : ViewDataBinding, V : ViewModel> : AppCompatActiv
         }
         return isOnline
     }
-
+   
 }

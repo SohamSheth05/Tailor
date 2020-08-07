@@ -1,14 +1,16 @@
 package com.tailor.app.ui.activity
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
+import androidx.core.content.ContextCompat
 import com.tailor.app.BR
 import com.tailor.app.R
 import com.tailor.app.base.BaseActivity
 import com.tailor.app.databinding.ActivitySplashBinding
 import com.tailor.app.ui.fragments.LandingFragment
 import com.tailor.app.ui.viewmodels.SplashViewModel
-import kotlinx.android.synthetic.main.activity_splash.view.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>() {

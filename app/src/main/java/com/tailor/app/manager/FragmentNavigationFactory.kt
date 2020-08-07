@@ -11,14 +11,15 @@ import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
 import androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE
 import androidx.transition.TransitionInflater
-
 import com.tailor.app.R
 import com.tailor.app.base.BaseActivity
 import com.tailor.app.base.BaseFragment
+
+import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class FragmentNavigationFactory constructor(val context: Context) {
+class FragmentNavigationFactory @Inject constructor(val context: Context) {
 
     private var fragment: BaseFragment<*, *>? = null
     private var tag: String? = null

@@ -10,6 +10,10 @@ object URLFactory {
     lateinit var HOST: String
     lateinit var API_PATH: String
     fun provideHttpUrl(): HttpUrl {
+
+        SCHEME = "http"
+        HOST = "androhub.com"
+        API_PATH = "demo/"
        /* when (BuildConfig.BUILD_TYPE) {
             "staging" -> {
                 SCHEME = "https"
@@ -44,7 +48,7 @@ object URLFactory {
 
 
 
-    const val LOGIN = "login"
+    const val LOGIN = "demo.mp3"
     const val FORGOT_PASSWORD_URL = "reset-password"
     const val CHANGE_PASSWORD_URL = "change-password"
 
